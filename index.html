@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kidonex - Kids Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Kidonex</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Welcome to Kidonex</h1>
+      <p>Your colorful world of kids’ fashion, toys, and fun!</p>
+      <button onclick="scrollToProducts()">Shop Now</button>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="file:///C:/Users/fathi/Downloads/toy%20car.jpg" alt="Toy Car" />
+        <h3>Toy Car</h3>
+        <p>Fun and safe toy car for kids.</p>
+        <p class="price">₹9999</p>
+        <button onclick="addToCart('Toy Car', 9999)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="file:///C:/Users/fathi/Downloads/doll%20house1.jpg" alt="Doll House" />
+        <h3>Doll House</h3>
+        <p>Colorful doll house with furniture set.</p>
+        <p class="price">₹6099</p>
+        <button onclick="addToCart('Doll House', 6099)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="file:///C:/Users/fathi/Downloads/teddy%20bear.jpg" alt="Teddy Bear" />
+        <h3>Teddy Bear</h3>
+        <p>Soft & cuddly teddy for hugs and love.</p>
+        <p class="price">₹499</p>
+        <button onclick="addToCart('Teddy Bear', 499)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="file:///C:/Users/fathi/Downloads/baby%20set.jpg" alt="Baby set" />
+        <h3>Baby set</h3>
+        <p>Gentle and complete care set for your little one’s delicate skin — safe, natural, and pediatrician-approved</p>
+        <p class="price">₹659</p>
+        <button onclick="addToCart('Baby set', 659)">Add to Cart</button>
+      </div>
+       <div class="product-card">
+        <img src="file:///C:/Users/fathi/Pictures/Screenshots/Screenshot%202025-06-19%20223046.png" alt="Rc car" />
+        <h3>Rc car</h3>
+        <p>Built for thrills, made for kids!</p>
+        <p class="price">₹999</p>
+        <button onclick="addToCart('Rc car', 999)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="file:///C:/Users/fathi/Pictures/Screenshots/Screenshot%202025-06-19%20223954.png" alt="3 wheel kids scooter" />
+        <h3>3 wheel kids scooter</h3>
+        <p>Zoom and glide: safe and stylish fun for little riders!</p>
+        <p class="price">₹1810</p>
+        <button onclick="addToCart('3 wheel kids scooter', 1810)">Add to Cart</button>
+      </div>
+       <div class="product-card">
+        <img src="file:///C:/Users/fathi/Downloads/baby%20stoller.jpg" alt="Baby stroller" />
+        <h3>Baby stroller</h3>
+        <p>Safe & stylish stroller for joyful family strolls!</p>
+        <p class="price">₹4349</p>
+        <button onclick="addToCart('Baby stroller', 4349)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="file:///C:/Users/fathi/Downloads/puzzle.jpg" alt="wooden puzzle set " />
+        <h3>wooden puzzle set </h3>
+        <p>Learn & Play: Colorful puzzles that spark curiosity!</p>
+        <p class="price">₹459</p>
+        <button onclick="addToCart('wooden puzzle set ', 459)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: info@kidonex.com  | Phone: +91-7593030801</p>
+    <p>© 2025 Kidonex. All rights reserved.</p>
+  </footer>
+
+  <!-- 🛒 Cart Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
